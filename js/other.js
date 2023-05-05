@@ -73,15 +73,17 @@ function other_collectArticleGet(yourId) {
 let string_center_collect_comment2=''
 //获取文章细节
 function getCollectArticle_detial2(articleId){
-    string_center_collect_comment2=''
-    getCollectArticle_comment2(articleId)
+    // string_center_collect_comment2=''
+    // getCollectArticle_comment2(articleId)
     let getCollectArticle_detial ={
         method: 'get',
         url: 'http://175.178.4.54:3007/article/getDetails',
         data: {
             articleId: +articleId
         },
-        success: function (response) {
+        success: async function (response) {
+            string_center_collect_comment2=''
+            await getCollectArticle_comment2(articleId)
             let strings=''
                 let cnode = document.createElement("div")
                 cnode.setAttribute("class", "other-main-bigbox1")
@@ -144,7 +146,7 @@ function getCollectArticle_detial2(articleId){
 }
 //获取收藏的文章的评论(bug)
 function getCollectArticle_comment2(articleId){
-    
+    return new Promise((res, rej) => {
     let otherFansparamsObj = {
         method: 'get',
         url: 'http://175.178.4.54:3007/review/getReviewsByArt',
@@ -213,11 +215,13 @@ function getCollectArticle_comment2(articleId){
             if (result.status === 200) { // var result = JSON.parse(xhr.responseText)
                 otherFansparamsObj.success(result)
                 console.log("查询成功~")
+                res()
             }
             if (result.status === 400) {
 
                 console.log(xhr.responseText)
                 console.log("查询失败~")
+                rej()
     //             string_center_collect_comment=`</div>
     //             <div class="more">暂无评论</div>
     //         </div>
@@ -227,6 +231,7 @@ function getCollectArticle_comment2(articleId){
             console.log("请求失败")
         }
     }
+    })
 }
 
 // Ta喜欢过的文章
