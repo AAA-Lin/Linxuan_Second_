@@ -200,7 +200,12 @@ function GetAndPost(PparamsObj) {
         xhr.open(PparamsObj.method, PparamsObj.url + '?' + qs)
         xhr.setRequestHeader('Authorization', token)
         xhr.send()
-    }else{
+    }else if(PparamsObj.url=="http://175.178.4.54:3007/follow/unfollow"){
+        xhr.open(PparamsObj.method, PparamsObj.url + '?' + qs)
+        xhr.setRequestHeader('Authorization', token)
+        xhr.send()
+    }
+    else{
 
     if (PparamsObj.method.toUpperCase() === 'GET') {
         xhr.open(PparamsObj.method, PparamsObj.url + '?' + qs)
@@ -215,6 +220,9 @@ function GetAndPost(PparamsObj) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             if(PparamsObj.url=="http://175.178.4.54:3007/follow/followUser"){
+                PparamsObj.success()
+                return
+            }else if(PparamsObj.url=="http://175.178.4.54:3007/follow/unfollow"){
                 PparamsObj.success()
                 return
             }
@@ -500,13 +508,16 @@ function clickthing() {
     // console.log("到这")
     // console.log(recommend_foot_pic.length)
     for (let i = 0; i < recommend_foot_pic.length; i++) {
-        recommend_foot_pic[i].addEventListener('click', function (e) {
+        recommend_foot_pic[i].addEventListener('click', async function (e) {
             e.stopPropagation()
             homepage.style.display = 'none'
             if(this.getAttribute('authorId')==yourId){
                 showcenter()
                 center.style.display = 'block'
             }else{
+                // 获取我的关注列表跟粉丝列表
+                await getFollows(yourId)
+                await get_FansList(yourId)
                 showother(this.getAttribute('authorId'))
                 other.style.display = 'block'
             }
@@ -560,26 +571,29 @@ function showother(othersId) {
             other_follow(othersId)
             remove_other()
             other_publish(othersId)
-            //获取我的关注列表跟粉丝列表
-            getFollows(yourId)
-            get_FansList(yourId)
+            // //获取我的关注列表跟粉丝列表
+            // getFollows(yourId)
+            // get_FansList(yourId)
+            console.log(followsLists);
+            console.log(fansLists);
+            console.log(response.data);
             for(let k=0;k<followsLists.length;k++){
                 //我的关注列表里有这个人
                 if(followsLists[k] == response.data.username){
                     for(let v=0;v<fansLists.length;v++){
                         //我的粉丝列表里有这个人
-                    if(fansLists[v] == response.data.username){
-                    document.querySelector(".other-main-center-two .followbox").innerHTML='互相关注'
-                    document.querySelector(".other-main-center-two .followbox").setAttribute("follow","1")
-                    break
-                    }else if(v==fansLists.length-1){
-                        //我的粉丝列表里没有这个人
-                        document.querySelector(".other-main-center-two .followbox").innerHTML='已关注'
-                        document.querySelector(".other-main-center-two .followbox").setAttribute("follow","2")
-                        break
+                        if(fansLists[v] == response.data.username){
+                            document.querySelector(".other-main-center-two .followbox").innerHTML='互相关注'
+                            document.querySelector(".other-main-center-two .followbox").setAttribute("follow","1")
+                            break
+                        }else if(v==fansLists.length-1){
+                            //我的粉丝列表里没有这个人
+                            document.querySelector(".other-main-center-two .followbox").innerHTML='已关注'
+                            document.querySelector(".other-main-center-two .followbox").setAttribute("follow","2")
+                            break
+                        }
                     }
                     break
-                }
                 }else if(k==followsLists.length-1){
                     //我的关注列表里没有这个人
                     document.querySelector(".other-main-center-two .followbox").innerHTML='未关注'
