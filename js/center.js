@@ -579,9 +579,10 @@ function getCollectArticle_detial(articleId){
         data: {
             articleId: +articleId
         },
-        success: function (response) {
+        success: async function (response) {
+            string_center_collect_comment=''
             // console.log(string_center_collect_comment)
-            getCollectArticle_comment(articleId)
+            await getCollectArticle_comment(articleId)
             // console.log("+++++++++++++++++++++++++++++++++")
             // console.log(string_center_collect_comment)
             let strings=''
@@ -645,90 +646,95 @@ function getCollectArticle_detial(articleId){
 }
 //获取收藏的文章的评论（有bug)
 function getCollectArticle_comment(articleId){
-    let otherFansparamsObj = {
-        method: 'get',
-        url: 'http://175.178.4.54:3007/review/getReviewsByArt',
-        data: {
-            articleId: +articleId,
-            page: 1,
-            size: 10
-        },
-        success: function (response) {
-            string_center_collect_comment=''
-            // console.log("--------------------")
-
-            // console.log(response)
-            // console.log(response.list[0])
-            // console.log(response.list.length)
-                if (response.list.length>0){ 
-                    // for(let k = 0; k < response.list.pages[i].firstReview.length; k++){
-                        string_center_collect_comment += `
-                        
-                <div class="username">${response.list[0].userInfo.userName}: </div>
-                <div class="content"> ${response.list[0].content}</div>
-                    </div>
-            `
-                    if (response.list.length > 1) {
-                        string_center_collect_comment += `
-                <div class="more">查看更多评论</div>
-            </div>
-            </div>
-`
-                    } else {
-                        string_center_collect_comment += `</div>
+    return new Promise((res, rej) => {
+        let otherFansparamsObj = {
+            method: 'get',
+            url: 'http://175.178.4.54:3007/review/getReviewsByArt',
+            data: {
+                articleId: +articleId,
+                page: 1,
+                size: 10
+            },
+            success: function (response) {
+                string_center_collect_comment=''
+                // console.log("--------------------")
+    
+                // console.log(response)
+                // console.log(response.list[0])
+                // console.log(response.list.length)
+                    if (response.list.length>0){ 
+                        // for(let k = 0; k < response.list.pages[i].firstReview.length; k++){
+                            string_center_collect_comment += `
+                            
+                    <div class="username">${response.list[0].userInfo.userName}: </div>
+                    <div class="content"> ${response.list[0].content}</div>
                         </div>
                 `
+                        if (response.list.length > 1) {
+                            string_center_collect_comment += `
+                    <div class="more">查看更多评论</div>
+                </div>
+                </div>
+    `
+                        } else {
+                            string_center_collect_comment += `</div>
+                            </div>
+                    `
+                        }
+                        // }
+                    } else if(response.list.length==0){
+                        string_center_collect_comment += `</div>
+                <div class="more">暂无评论</div>
+            </div>
+            </div>
+    `
                     }
-                    // }
-                } else if(response.list.length==0){
-                    string_center_collect_comment += `</div>
-            <div class="more">暂无评论</div>
-        </div>
-        </div>
-`
+                    // console.log(string_center_collect_comment)
+            }
+        }
+        // 发起请求
+        token = window.sessionStorage.getItem('token')
+        let xhr = new XMLHttpRequest()
+        const qs = resolveData(otherFansparamsObj.data)
+        const formData = new FormData()
+        for (let k in otherFansparamsObj.data) {
+            formData.append(k, otherFansparamsObj.data[k]);
+        }
+    
+        if (otherFansparamsObj.method.toUpperCase() === 'GET') {
+            xhr.open(otherFansparamsObj.method, otherFansparamsObj.url + '?' + qs)
+            xhr.setRequestHeader('Authorization', token)
+            xhr.send()
+        } else if (otherFansparamsObj.method.toUpperCase() === 'POST') {
+            xhr.open(otherFansparamsObj.method, otherFansparamsObj.url)
+            xhr.setRequestHeader('Authorization', token)
+            xhr.send(formData)
+        }
+    
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var result = JSON.parse(xhr.responseText)
+                if (result.status === 200) { // var result = JSON.parse(xhr.responseText)
+                    otherFansparamsObj.success(result)
+                    console.log("查询成功~")
+                    res()
                 }
-                // console.log(string_center_collect_comment)
-        }
-    }
-    // 发起请求
-    token = window.sessionStorage.getItem('token')
-    let xhr = new XMLHttpRequest()
-    const qs = resolveData(otherFansparamsObj.data)
-    const formData = new FormData()
-    for (let k in otherFansparamsObj.data) {
-        formData.append(k, otherFansparamsObj.data[k]);
-    }
-
-    if (otherFansparamsObj.method.toUpperCase() === 'GET') {
-        xhr.open(otherFansparamsObj.method, otherFansparamsObj.url + '?' + qs)
-        xhr.setRequestHeader('Authorization', token)
-        xhr.send()
-    } else if (otherFansparamsObj.method.toUpperCase() === 'POST') {
-        xhr.open(otherFansparamsObj.method, otherFansparamsObj.url)
-        xhr.setRequestHeader('Authorization', token)
-        xhr.send(formData)
-    }
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var result = JSON.parse(xhr.responseText)
-            if (result.status === 200) { // var result = JSON.parse(xhr.responseText)
-                otherFansparamsObj.success(result)
-                console.log("查询成功~")
+                if (result.status === 400) {
+    
+                    console.log(xhr.responseText)
+                    console.log("查询失败~")
+                    rej()
+        //             string_center_collect_comment=`</div>
+        //             <div class="more">暂无评论</div>
+        //         </div>
+        // </div>`
+                }
+            } else {
+                // console.log("请求失败")
             }
-            if (result.status === 400) {
-
-                console.log(xhr.responseText)
-                console.log("查询失败~")
-    //             string_center_collect_comment=`</div>
-    //             <div class="more">暂无评论</div>
-    //         </div>
-    // </div>`
-            }
-        } else {
-            console.log("请求失败")
         }
-    }
+    })
+    
 
 }
 
@@ -745,8 +751,8 @@ function center_likeArticleGet(yourId) {
         success: function (response) {
             for (let i = 0; i < response.data.pages.length; i++) {
                 // console.log(response)
-            // getCollectArticle_comment(response.data.pages[i].id)
-            getCollectArticle_detial(response.data.pages[i].id)
+                // getCollectArticle_comment(response.data.pages[i].id)
+                getCollectArticle_detial(response.data.pages[i].id)
             }
             document.querySelector(".centercontent-box1").innerHTML = `${
                 response.data.pages.length
