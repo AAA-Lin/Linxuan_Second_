@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/landing.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/publish.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/message.css">
+        <link rel="stylesheet" href="css/center.css">
+        <link rel="stylesheet" href="css/collect.css">
+        <link rel="stylesheet" href="css/addnewfans.css">
+        <link rel="stylesheet" href="css/comment.css">
+        <link rel="stylesheet" href="css/data.css">
+        <link rel="stylesheet" href="css/newfollow.css">
+        <link rel="stylesheet" href="css/article.css">
+        <link rel="stylesheet" href="css/other.css">
+        <link rel="stylesheet" href="css/chat.css">
+        <link rel="stylesheet" href="css/shop.css">
+        <!-- <script src="js/home.js"></script> -->
+    </head>
+
+    <body>
+        <!-- 1.登录界面 -->
+        <div class="landing">
+            <div class="land-main">
+                <div class="land-logo">
+                    <img src="images/landing/lofter.logo.png" alt="">
+                </div>
+                <input type="text " placeholder="请输入用户名:" name="username" id="username" autofocus="autofocus"
+                    maxlength="8" autocomplete="off">
+                <input type="password" name="password" id="password" placeholder="请输入密码:" maxlength="16"
+                    autocomplete="off">
+                <div class="land-agree">
+                    <input type="checkbox">我已阅读并同意《用户协议》
+                </div>
+                <div class="land-pass">
+                    <input type="submit" value="登录" id="landing-btn">
+                </div>
+                </form>
+                <div class="land-foot">点击注册</div>
+            </div>
+    </body>
+
+    </html>
+    </div>
+    <!-- 2.首页部分 -->
+    <div class="homepage">
+        <div class="home-head">
+            <div class="home-head-search">
+                <span class="searchSpan"></span>
+                <input value="" type="text" class="search-input" placeholder=" 搜索">
+
+            </div>
+        </div>
+        <!-- 首页顶部七个分类的标签 -->
+        <div class="home-main-head">
+            <ul>
+                <li class="mian-head1-recommend tag active">推荐</li>
+                <li class="mian-head1-travel tag">视频</li>
+                <li class="mian-head1-food tag">文学</li>
+                <li class="mian-head1-fashion tag">绘画</li>
+                <li class="mian-head1-makeup tag">摄影</li>
+                <li class="mian-head1-efficient tag">影视</li>
+                <li class="mian-head1-skincare tag">娱乐</li>
+            </ul>
+
+        </div>
+        <!-- 具体每一页的每一个盒子 -->
+        <div class="home-main1-recommend">
+            <!-- <div class="recommend-box1">
+                    <div class="recommend-box-pic"><img src="image/1.jpg" alt="" class="recommend-box-pics"></div>
+                    <div class="recommend-box-title"></div>
+                    <div class="recommend-box-foot">
+                        <div class="recommend-foot-pic"><img src="" alt="" class="recommend-foot-pics"></div>
+                        <div class="recommend-foot-author"></div>
+                        <div class="recommend-foot-icon"></div>
+                        <div class="recommend-foot-like"></div>
+                    </div>
+                </div> -->
+        </div>
+        <!-- 首页的最底部 -->
+        <div class="home-foot-bigbox">
+            <div class="home-foot" data-id="1">
+                <div class="home-foot-page active" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">首页</div>
+                </div>
+                <div class="home-foot-msg" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">消息</div>
+                </div>
+                <div class="home-foot-publish" data-id="1">
+                    <div class="foot-box1"></div>
+                </div>
+                <div class="home-foot-shop" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">买周边</div>
+                </div>
+                <div class="home-foot-center" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">我的</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3.文章提交的界面 -->
+    <div class="publish">
+        <div class="publish-tag-mask"></div>
+        <div class="publish-head">
+            <div class="publish-head-back">
+                
+            </div>
+            <!-- 上传图片 -->
+            <div class="publish-head-upload">+</div>
+            <input type="file" id="imgFile" class="upload-file" onchange="previewFile()" autocomplete="off">
+            <img src="" class="upload-imgs" alt="" id="avatarPreview">
+            <div class="publish-head-title">
+                <input class="publish-title" type="text" placeholder="填写标题会有更多赞哦~" name="title" autocomplete="off">
+            </div>
+            <hr style="border: 1px solid #f5f2f2;margin-left: 14px;margin-right: 14px; margin-top: 10px;">
+        </div>
+
+        <div class="publish-main">
+            <input class="publish-maintext" name="content" placeholder="添加正文" autocomplete="off">
+
+            </input>
+            <div class="two-btn">
+                <div class="btn-topic">#标签</div>
+                <div class="topic-box">
+                    <input type="text" name="tags" class="publish-tag" placeholder="请输入要添加的Tag" autocomplete="off">
+                    <div class="publish-tag-but">
+                        <div class="tag-cancle">取消</div>
+                        <div class="tag-ensuer">确定</div>
+                    </div>
+                </div>
+                <div class="btn-user">@用户</div>
+            </div>
+            <hr style="border: 1px solid #f5f2f2;margin-left: 14px;margin-right: 14px; margin-top: 8px;">
+        </div>
+        <div class="publish-foot">发布笔记</div>
+    </div>
+    <!-- 4.搜索界面 -->
+    <div class="search">
+        <div class="search-head">
+            <!-- <div class="search-head-back">
+                
+            </div> -->
+            <div class="search-head-box2">
+                <span class="search-btn"></span>
+                <input type="text" class="search-head-main" placeholder="请输入搜索内容">
+            </div>
+            <div class="cancel-head-box3">取消
+                <!-- <input type="submit" value="搜索" class="search-btn"> -->
+            </div>
+            
+        </div>
+        <div class="search_history">
+            <div class="search_history_header">
+            <div class="history_head">最近搜索</div>
+            <div class="delect_icon"></div>
+        </div>
+        <div class="history_ul_bigbox">
+        <ul class="history_content">
+            <!-- <li >1111</li> -->
+        </ul>
+    </div>
+        </div>
+        <div class="search-main-head">
+            <ul>
+                <li class="search-head1-summarize tag">综合</li>
+                <li class="search-head1-label tag active">标签</li>
+                <li class="search-head1-compilations tag">合集</li>
+                <li class="search-head1-essay tag">文章</li>
+                <li class="search-head1-discuss tag">讨论</li>
+                <li class="search-head1-list tag">粮单</li>
+                <li class="search-head1-user tag">用户</li>
+            </ul>
+        </div>
+        <!-- <div class="search-main">
+            <ul>
+                <li class="search-main-tag1 tag-search">文章</li>
+                <li class="search-main-tag2 tag-search">用户</li>
+            </ul>
+        </div> -->
+        <div class="search-tag-bigbox">
+            <!-- <div class="search-tag-body">
+                <div class="tag-boxleft">#123333333</div>
+                <div class="tag-boxright">123人参与</div>
+            </div> -->
+            
+        </div>
+        <div class="search-bigbox-dispaly2">
+            <!-- <div class="search-tag2-artical"> -->
+                
+                <!-- 里面的每一个小卡片的模板 -->
+                <!-- <div class="search-main1-artical_bigbox"> -->
+                    <!-- <div class="artical-box1">
+                        <div class="artical-box-pic"><img src="" alt="" class="artical-box-pics"></div>
+                        <div class="artical-box-title"></div>
+                        <div class="artical-box-foot">
+                            <div class="artical-foot-pic"><img src="" alt="" class="artical-foot-pics"></div>
+                            <div class="artical-foot-author"></div>
+                            <div class="artical-foot-icon"></div>
+                            <div class="artical-foot-like"></div>
+                        </div>
+                    </div> -->
+                <!-- </div> -->
+                <!-- <div class="search-blank1">没有更多内容了~</div> -->
+            <!-- </div> -->
+        </div>
+        <div class="search-main-boxs">
+            <div class="search_bigbox_dispaly">
+                <div class="search-tag1-artical">
+                    
+                    <!-- 里面的每一个小卡片的模板 -->
+                    <!-- <div class="search-main1-artical_bigbox"> -->
+                        <!-- <div class="artical-box1">
+                            <div class="artical-box-pic"><img src="" alt="" class="artical-box-pics"></div>
+                            <div class="artical-box-title"></div>
+                            <div class="artical-box-foot">
+                                <div class="artical-foot-pic"><img src="" alt="" class="artical-foot-pics"></div>
+                                <div class="artical-foot-author"></div>
+                                <div class="artical-foot-icon"></div>
+                                <div class="artical-foot-like"></div>
+                            </div>
+                        </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="search-blank1">没有更多内容了~</div> -->
+                </div>
+            </div>
+                <div class="search-tag2-user search-box">
+                    <div class="search-main2-user">
+                        <!-- <div class="search-user-box1">
+                            <div class="search-user-pic"><img src="" alt="" class="search-user-pics"></div>
+                            <div class="userName_intro">
+                            <div class="search-user-name">123</div>
+                            <div class="search-user-intro">简介</div>
+                        </div>
+                        </div> -->
+                    </div>
+                    <!-- <div class="search-blank2">没有更多内容了~</div> -->
+                </div>
+        </div>
+    </div>
+    <!-- 5.我的消息 -->
+    <div class="message">
+        <div class="message-top">
+            <div class="message-top-back">
+                
+            </div>
+            <div class="message-top-text">
+                消息
+            </div>
+            <div class="search-head-box3">
+                聊天
+            </div>
+        </div>
+        <!-- 三个选择点击的盒子 -->
+        <div class="message-main">
+            <div class="message-main-section">
+                <div class="message-main-collect">
+                    <div class="message-main-logo"
+                        style="color: rgb(248, 101, 94);background-color: rgb(254, 233, 232);"></div>
+                    <div class="message-main-text">赞和收藏</div>
+                </div>
+                <div class="message-main-fans">
+                    <div class="message-main-logo"
+                        style="color: rgb(73, 133, 253);background-color: rgb(231, 241, 253);"></div>
+                    <div class="message-main-text">新增关注</div>
+                </div>
+
+                <div class="message-main-comment">
+                    <div class="message-main-logo"
+                        style="color: rgb(94, 217, 154);background-color: rgb(232, 249, 241);"></div>
+                    <div class="message-main-text">评论和@</div>
+                </div>
+            </div>
+            <!-- 我的消息里面的聊天列表 -->
+            <div class="message-msgList">
+                <div class="message-msgList-main">
+                    <div class="message-msgList-box1">
+                        <div class="msgList-pic"><img src="" alt="" class="msgList-pics"></div>
+                        <div class="msgList-main">
+                            <div class="msgList-nickname">test</div>
+                            <div class="msgList-description">早上好~</div>
+                        </div>
+                        <!-- <div class="msgList-icon"></div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 底部选择菜单-->
+        <div class="msg-foot-bigbox">
+            <div class="msg-foot" data-id="1">
+                <div class="msg-foot-page" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">首页</div>
+                </div>
+                <div class="msg-foot-msg  active" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">消息</div>
+                </div>
+                <div class="msg-foot-publish" data-id="1">
+                    <div class="foot-box1"></div>
+                </div>
+                <div class="msg-foot-shop" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">买周边</div>
+                </div>
+                <div class="msg-foot-center" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">我的</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 6.个人中心 -->
+    <div class="center">
+        <div class="center-tag-mask"></div>
+        <div class="center-top">
+            <div class="center-top-icon1"></div>
+            <div class="center-top-icon2"></div>
+        </div>
+        <div class="center-text">
+            <div class="center-text-bigheader">
+                <div class="bgc"></div>
+                <div class="center-text-box1">
+                    <div class="center-box1-img"><img src="image/1.jpg" alt="" class="center-box1-imgs"></div>
+                    <div class="center-box1-name">123</div>
+                    <div class="center-box1-id">
+
+                        <span class="center-box1-id1">id: 1234567</span>
+                        <span class="center-box1-id2">简介: 早上好</span>
+                    </div>
+                </div>
+            </div>
+            <div class="center-text-box2">
+                <div class="center-three-class">
+                    <div class="center-box2-attent">
+                        <div class="center-attent-num">0</div>
+                        <div class="center-attent-class">关注</div>
+                    </div>
+                    <div class="center-box2-fans">
+                        <div class="center-fans-num">0</div>
+                        <div class="center-fans-class">粉丝</div>
+                    </div>
+                    <div class="center-box2-like">
+                        <div class="center-like-num">0</div>
+                        <div class="center-like-class">点赞</div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-text-box3">
+                <ul>
+                    <li class="center-box3-notes centerbox centerbox-change">文章</li>
+                    <li class="center-box3-collect centerbox">收藏</li>
+                    <li class="center-box3-like centerbox">喜欢</li>
+                </ul>
+            </div>
+            <!-- 具体的每一个盒子 -->
+            <div class="centercontent-main1-recommend">
+                <div class="centercontent-box1">0 篇文章</div>
+                <div class="centercontent-mainbox">
+                    <div class="centerArticle-main-bigbox1">
+                        <!-- <div class="centercontentArticlesbox">
+                                <div class="centercontent-box-time">
+                                    <div class="time1">30</div>
+                                    <div>/</div>
+                                    <div class="time2">03</div>
+                                </div>
+                                <div class="centercontent-box-title">啊啊啊</div>
+                                <div class="centercontent-box-content">测试测试测试</div>
+                                <div class="centercontent-tagAndview">
+                                    <div class="cent-taglittlebox">
+                                    <div class="centercontent-foot-tag"># 123</div>
+                                </div>
+                                    <div class="centercontent-foot-view">123人阅读</div>
+                                </div>
+                                <div class="centercontent-iconBox">
+                                    <div class="centercontent-foot-iconshare1"></div>
+                                    <div class="centercontent-foot-iconlike1"></div>
+                                    <div class="centercontent-foot-iconlikenum">123</div>
+                
+                                    <div class="centercontent-foot-iconcomment2"></div>
+                                    <div class="centercontent-foot-iconcommentnum">123</div>
+                                </div>
+                                <div class="centercontent-main-commentsbox">
+                                    <div class="word">
+                                        <div class="username">username : </div>
+                                    <div class="content"> 123</div>
+                                </div>
+                        <div class="more">查看更多评论</div>
+                                </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-main"></div>
+        <div class="center-foot-bigbox">
+            <div class="center-foot" data-id="1">
+                <div class="center-foot-page" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">首页</div>
+                </div>
+                <div class="center-foot-msg" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">消息</div>
+                </div>
+                <div class="center-foot-publish" data-id="1">
+                    <div class="foot-box1"></div>
+                </div>
+                <div class="center-foot-shop" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">买周边</div>
+                </div>
+                <div class="center-foot-center  active" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">我的</div>
+                </div>
+            </div>
+        </div>
+        <div class="center-foot-data-bigbox">
+            <div class="center-box-data">
+                <div class="center-data-btn">编辑个人资料</div>
+                <div class="center-box-land">退出登录</div>
+                <div class="cancelbox1">取消</div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 7.获赞与收藏 -->
+    <div class="collect">
+        <div class="collert-top-box">
+            <div class="collect-top">
+                <div class="collect-top-back">
+                    </div>
+                <div class="collect-top-word">收到的赞与收藏</div>
+            </div>
+        </div>
+        <div class="collect-class">
+            <div class="collect-class-like active">赞</div>
+            <div class="collect-class-collect">收藏</div>
+        </div>
+        <!-- 点赞的内容 -->
+        <div class="collect-main-like">
+            <div class="box1">
+                <div class="box1-left">
+                    <div class="box1-img"><img src="image/1.jpg" alt="" class="box1-imgs"></div>
+                    <div class="box1-word">
+                        <div class="box1-name">123</div>
+                        <div class="box1-text">赞了你的评论 : 1111111113</div>
+                    </div>
+
+                </div>
+                <div class="box1-right">
+                    <div class="box1-pic">
+                        <img src="" alt="" class="box1-pics">
+                    </div>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box1-left">
+                    <div class="box1-img"><img src="image/1.jpg" alt="" class="box1-imgs"></div>
+                    <div class="box1-word">
+                        <div class="box1-name">123</div>
+                        <div class="box1-text">赞了你的评论 : 1111111113</div>
+                    </div>
+
+                </div>
+                <div class="box1-right">
+                    <div class="box1-pic">
+                        <img src="" alt="" class="box1-pics">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 收藏的内容 -->
+        <div class="collect-main-collect">
+            <div class="box2">
+                <div class="box2-left">
+                    <div class="box2-img"><img src="" alt="" class="box2-imgs"></div>
+                    <div class="box2-word">
+                        <div class="box2-name">123</div>
+                        <div class="box2-text">收藏了你的文章</div>
+                    </div>
+                </div>
+                <div class="box2-right">
+                    <div class="box2-pic">
+                        <img src="" alt="" class="box2-pics">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 8.新增的粉丝 -->
+    <div class="newfans">
+        <div class="newfans-top">
+            <div class="newfans-top-back"></div>
+            <div class="newfans-top-word">粉丝列表</div>
+        </div>
+        <div class="newfans-head-head">
+            <div class="home-head-search" style="position: relative;margin-top: 5px;margin-bottom: 5px; width: 420px;">
+                <span class="searchSpan"></span>
+                <input value="" type="text" class="search-input" placeholder=" 搜索粉丝： ">
+
+            </div>
+        </div>
+        <div class="newfans-main">
+            <div class="newfanss-main-user">
+                <div class="newfans-box1">
+                    <div class="newfans-pic"><img src="" alt="" class="newfans-pics"></div>
+                    <div class="newfans-name">123</div>
+                    <div class="newfans-foci">已关注</div>
+                </div>
+            </div>
+            <div class="newfanss-blank">没有关注别人哦~</div>
+        </div>
+    </div>
+    <!-- 9.收到的评论 -->
+    <div class="comment">
+        <div class="comment-top">
+            <div class="comment-top-back"></div>
+            <div class="comment-top-word">收到的评论和@</div>
+        </div>
+        <div class="comment-main">
+            <!-- <div class="comment-box1" >
+                <div class="comment-box1-left">
+                    <div class="comment-box1-img"><img src="image/1.jpg" alt="" class="comment-box1-imgs"></div>
+                    <div class="comment-box1-word">
+                        <div class="comment-box1-name">123</div>
+                        <div class="comment-box1-text">评论了你的文章111111111111111111111111111111</div>
+                        <div class="comment-box1-time">2023-05-05</div>
+                    </div>
+                </div>
+                <div class="comment-box1-right">
+                    <div class="comment-box1-pic"><img src="" alt="" class="comment-box1-pics"></div>
+
+                </div>
+            </div> -->
+            <!-- <div class="comment-box1">
+                <div class="comment-box1-left">
+                    <div class="comment-box1-img"><img src="image/1.jpg" alt="" class="comment-box1-imgs"></div>
+                    <div class="comment-box1-word">
+                        <div class="comment-box1-name">123</div>
+                        <div class="comment-box1-text">评论了你的文章</div>
+                        <div class="comment-box1-time">2023-05-05</div>
+                    </div>
+                </div>
+                <div class="comment-box1-right">
+                    <div class="comment-box1-pic"><img src="" alt="" class="comment-box1-pics"></div>
+
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- 10.编辑资料 -->
+    <div class="data">
+        <div class="data-top-bigbox">
+            <div class="data-top">
+                <div class="data-top-back">
+                    </div>
+                <div class="data-top-word">编辑个人资料</div>
+                <div class="savaData">保存</div>
+            </div>
+        </div>
+        <div class="data-pic"><img src="" alt="" class="data-pics">
+            <input type="file" class="upload-avatar" onchange="previewthis()">
+        </div>
+        <div class="data-main">
+            <div class="data-main-name">
+                <div class="data-main-reminder">昵称</div>
+                <div class="show-ickname show_data-all"></div>
+                <input type="text" id="edit-ickname" class="edit-data-all">
+                <div class="data-main-input"></div>
+            </div>
+            <div class="data-main-place">
+                <div class="data-main-reminder">id</div>
+                <div class="show-area show_data-all"></div>
+                <input type="text" id="edit-area" class="edit-data-all">
+                <div class="data-main-input"></div>
+            </div>
+            <div class="data-main-sex">
+                <div class="data-main-reminder">姓别</div>
+                <div class="show-gender show_data-all"></div>
+                <input type="text" id="edit-gender" class="edit-data-all" value="123">
+                <div class="data-main-input"></div>
+            </div>
+            <div class="data-main-birthday">
+                <div class="data-main-reminder">生日</div>
+                <div class="show-birthday show_data-all"></div>
+                <input type="text" id="edit-birthday" class="edit-data-all">
+                <div class="data-main-input"></div>
+            </div>
+            <div class="data-main-vita">
+                <div class="data-main-reminder">简介</div>
+                <div class="show-description show_data-all"></div>
+                <input type="text" id="edit-description" class="edit-data-all">
+                <div class="data-main-input"></div>
+
+            </div>
+            <div class="data-main-background">
+                <div class="data-main-reminder">主页背景</div>
+                <div class="data-backgroun-pic"><img src="" alt="" class="data-backgroun-pics">
+                    <input type="file" class="upload-background" onchange="background()">
+                </div>
+                <div class="data-main-input"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 11-显示关注的人的页面 -->
+    <div class="newfollow">
+        <div class="newfollow-top">
+            <div class="newfollow-top-back"></div>
+            <div class="newfollow-top-word">关注列表</div>
+        </div>
+        <div class="newfollow-head-head">
+            <div class="home-head-search" style="position: relative;margin-top: 5px;margin-bottom: 5px; width: 420px;">
+                <span class="searchSpan"></span>
+                <input value="" type="text" class="search-input" placeholder=" 搜索: 关注的博客">
+
+            </div>
+        </div>
+        <div class="newfollow-main">
+            <div class="newfollows-main-user">
+                <div class="newfollow-box1">
+                    <div class="newfollow-pic"><img src="" alt="" class="newfollow-pics"></div>
+                    <div class="newfollow-name">123</div>
+                    <div class="newfollow-foci">已关注</div>
+                </div>
+            </div>
+            <div class="newfollows-blank">没有关注别人哦~</div>
+        </div>
+    </div>
+    <!-- 12-文章详情页面 -->
+    <div class="article">
+        <div class="article-tag-mask"></div>
+        <div class="artical-top">
+            <div class="artical-top-back"></div>
+            <div class="artical-top-img"><img src="" alt="" class="artical-top-imgs"></div>
+            <div class="artical-top-name">123</div>
+            <div class="artical-top-attent">未关注</div>
+        </div>
+        <div class="artical-img">
+            <img src="" alt="" class="artical-imgs">
+        </div>
+        <div class="artical-main">
+            <div class="article-main-title">这个是标题</div>
+            <div class="article-main-content">这个是文章的主要内容11</div>
+            <div class="article-main-tag">
+                <div class="article-tag-box1">tag</div>
+                <div class="article-tag-box1">tag</div>
+                <div class="article-tag-box1">tag</div>
+                <div class="article-tag-box1">tag</div>
+            </div>
+            <div class="article-main-time">2-3</div>
+        </div>
+        <div class="artical-comment">
+            <div class="artical-iconbox">
+                <div class="article-comment-iconlikebox">
+                    <div class="article-comment-like" style="color: rgb(128, 124, 124);"></div>
+                    <div class="article-comment-likenumbox">123</div>
+                </div>
+                <div class="article-comment-iconcommentbox">
+                    <div class="article-comment-comment"></div>
+                    <div class="article-comment-commentnumbox">123</div>
+                </div>
+                <div class="article-comment-collect" style="color: rgb(128, 124, 124);"></div>
+                <div class="articleDelect-icon-box"></div>
+            </div>
+        </div>
+        <div class="article-comment-main">
+            <div class="comment-word-box">热门评论</div>
+            <div class="article-comment-bigbox1">
+                <div class="article-comment-main-bigbox" id="0">
+                    <div class="article-comment-box">
+                        <div class="commentbox-pic"><img src="" alt="" class="commentbox-pics"></div>
+                        <div class="commentbox-main">
+                            <div class="commentbox-nickname">name123</div>
+                            <div class="commentbox-content">
+                                word123333333333333333333333333333333333333333333333333333333333333</div>
+                            <div class="commentbox-time">time123</div>
+                        </div>
+                        <div class="commentbox-main-icon">
+                            <div class="commentbox-icon"></div>
+                            <div class="commentbox-likenum">12</div>
+                            
+                        </div>
+                        <div class="commentbox-delect"></div>
+                    </div>
+                    <div class="article-commentSecond-bigbox">
+                        <div class="article-commentSecond-box">
+                            <div class="commentSecondbox-pic"><img src="" alt="" class="commentSecondbox-pics"></div>
+                            <div class="commentSecondbox-main">
+                                <div class="commentSecondbox-nickname">name123</div>
+                                <div class="commentSecondbox-content">
+                                    word123333333333333333333333333333333333333333333333333333333333333</div>
+                                <div class="commentSecondbox-time">time123</div>
+                            </div>
+                            <div class="commentSecondbox-main-icon">
+                                <div class="commentSecondbox-icon"></div>
+                                <div class="commentSecondbox-likenum">12</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-foot-bigbox">
+            <div class="artical-foot">
+                <input type="text" class="article-input" placeholder=" 评论支持太太">
+                <div class="likebox-icon">
+                    <div class="article-like" style="color: rgb(128, 124, 124);"></div>
+                    <div class="article-likebox-num">123</div>
+                </div>
+                <div class="commentbox-icon">
+                    <div class="article-comment"></div>
+                    <div class="article-commentbox-num">456</div>
+                </div>
+            </div>
+        </div>
+        <div class="article-foot-data-bigbox">
+            <div class="top_bigbox">
+            <div class="article-data-top">全部评论</div>
+        </div>
+            <div class="article-box-data-content">
+                    <!-- <div class="article-comment-main-bigbox2" id = "1">
+                <div class="article-comment-box2">
+                <div class="commentbox2-pic">
+                    <img src="" alt="" class="commentbox2-pics" userId="1">
+                </div>
+                <div class="commentbox2-main">
+                    <div class="commentbox2-nickname">
+                        用户昵称
+                    </div>
+                    <div class="commentbox2-content">
+                        评论内容
+                    </div>
+                    <div class="commentbox2-time">时间</div>
+                </div>
+                <div class="commentbox2-main-icon">
+                <div class="commentbox2-icon"></div>
+                <div class="commentbox2-likenum">123</div>
+            </div>
+            <div class="commentbox2-delect"></div>
+        </div>
+    </div> -->
+            </div>
+                <div class="post-comment">
+                    <div class="artical-foot">
+                        <div class="input-emoji">
+                    <input type="text" class="article-input2" placeholder=" 评论支持太太">
+                    <div class="emoji-btn"></div>
+                </div>
+                    <div class="post-btn">发送</div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <!--13 别人的主页 -->
+    <div class="other">
+        <div class="other-top">
+            <div class="other-top-icon1"></div>
+            <div class="other-top-icon2"></div>
+        </div>
+        <div class="other-text">
+            <div class="other-text-bigheader">
+                <div class="bgc"></div>
+                <div class="other-text-box1">
+                    <div class="other-box1-img"><img src="image/1.jpg" alt="" class="other-box1-imgs"></div>
+                    <div class="other-box1-name">123</div>
+                    <div class="other-box1-id">
+
+                        <span class="other-box1-id1">id: 1234567</span>
+                        <span class="other-box1-id2">简介: 早上好</span>
+                    </div>
+                </div>
+            </div>
+            <div class="other-text-box2">
+                <div class="other-three-class">
+                    <div class="other-box2-attent">
+                        <div class="other-attent-num">0</div>
+                        <div class="other-attent-class">关注</div>
+                    </div>
+                    <div class="other-box2-fans">
+                        <div class="other-fans-num">0</div>
+                        <div class="other-fans-class">粉丝</div>
+                    </div>
+                    <div class="other-box2-like">
+                        <div class="other-like-num">0</div>
+                        <div class="other-like-class">点赞</div>
+                    </div>
+                </div>
+                <!-- <div class="other-box-data">
+                    <div class="other-data-btn">编辑资料</div>
+                </div> -->
+            </div>
+            <div class="other-main-center-two">
+                <div class="followbox">互相关注</div>
+                <div class="chatbox">聊天</div>
+                <div class="btnbox"></div>
+            </div>
+            <div class="other-text-box3">
+                <ul>
+                    <li class="other-box3-notes otherbox otherbox-change">文章</li>
+                    <li class="other-box3-collect otherbox">收藏</li>
+                    <li class="other-box3-like otherbox">喜欢</li>
+                </ul>
+            </div>
+            <!-- 具体的每一个盒子 -->
+            <div class="other-main1-recommend">
+                <div class="other-box1">1 篇文章</div>
+                <div class="other-main-bigbox1">
+                    <!-- <div class="otherArticlesbox">
+                            <div class="other-box-time">
+                                <div class="time1">30</div>
+                                <div>/</div>
+                                <div class="time2">03</div>
+                            </div>
+                            <div class="other-box-title">啊啊啊</div>
+                            <div class="other-box-content">测试测试测试</div>
+                            <div class="other-tagAndview">
+                                <div class="other-foot-tag"># 123</div>
+                                <div class="other-foot-view">123人阅读</div>
+                            </div>
+                            <div class="other-iconBox">
+                                <div class="other-foot-iconshare1"></div>
+                                <div class="other-foot-iconlike1"></div>
+                                <div class="other-foot-iconlikenum">123</div>
+            
+                                <div class="other-foot-iconcomment2"></div>
+                                <div class="other-foot-iconcommentnum">123</div>
+                            </div>
+                            <div class="other-main-commentsbox">
+                                <div class="word">
+                                    <div class="username">username : </div>
+                                <div class="content"> 123</div>
+                            </div>
+                            <div class="word">
+                                <div class="username">username : </div>
+                            <div class="content"> 123</div>
+                        </div>
+                        <div class="word">
+                            <div class="username">username : </div>
+                        <div class="content"> 123</div>
+                    </div>
+                    <div class="word">
+                        <div class="username">username : </div>
+                    <div class="content"> 123</div>
+                </div>
+                                <div class="more">查看更多评论</div>
+                            </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="other-main"></div>
+    </div>
+    </div>
+    <!-- 14.和机器人聊天的盒子 -->
+    <div class="chat">
+        <div class="chat-top">
+            <div class="chat-top-back"></div>
+            <div class="chat-top-nickname">智能机器人</div>
+            <div class="chat-top-icon2"></div>
+        </div>
+        <div class="chat-main">
+            <ul class="talk_list" style="top: 0px;" id="talk_list">
+                <li class="left_word">
+                    <img src="" />
+                    <span class="span">
+                        嗨，最近想我没有？</span>
+                </li>
+                <li class="right_word">
+                    <img src="" />
+                    <span>你好哦</span>
+                </li>
+                <li class="left_word">
+                    <img src="" />
+                    <span class="span">
+                        嗨，最近想我没有？</span>
+                </li>
+                <li class="right_word">
+                    <img src="" />
+                    <span>你好哦</span>
+                </li>
+                <li class="left_word">
+                    <img src="" />
+                    <span class="span">
+                        嗨，最近想我没有？</span>
+                </li>
+                <li class="right_word">
+                    <img src="" />
+                    <span>你好哦</span>
+                </li>
+            </ul>
+            <div class="drag_bar" style="display: none;">
+                <div class="drager ui-draggable ui-draggable-handle" style="display: none; height: 412.628px;"></div>
+            </div>
+        </div>
+        <div class="chat-input-box"><input type="text" class="chat-input" placeholder="请输入内容" id="ipt"><input
+                type="button" value="发 送" class="input_sub" id="btnSend" /></div>
+    </div>
+    <!-- 买周边页面 -->
+    <div class="shop">
+        <div class="shop-foot-bigbox">
+            <div class="shop-foot" data-id="1">
+                <div class="shop-foot-page" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">首页</div>
+                </div>
+                <div class="shop-foot-msg" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">消息</div>
+                </div>
+                <div class="shop-foot-publish" data-id="1">
+                    <div class="foot-box1"></div>
+                </div>
+                <div class="shop-foot-shop active" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">买周边</div>
+                </div>
+                <div class="shop-foot-center" data-id="1">
+                    <div class="foot-box1"></div>
+                    <div class="foot-box2">我的</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
+    <script src="js/message.js"></script>
+    <script src="js/center.js"></script>
+    <script src="js/publish.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/landing.js"></script>
+    <script src="js/article.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/other.js"></script>
+    <script src="js/chat.js"></script>
+    </body>
+
+    </html>

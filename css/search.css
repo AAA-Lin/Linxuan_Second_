@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.search {
+    display: none;
+    margin: auto;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    /* background-color: #fff; */
+    overflow: auto;
+}
+
+.search::-webkit-scrollbar {
+    display: none;
+}
+
+.search-head {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 443px;
+    height: 50px;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.search-head-back {
+    width: 30px;
+    height: 30px;
+    font-family: 'icomoon';
+    font-size: 30px;
+    line-height: 30px;
+    color: rgb(168, 167, 167);
+    margin-top: 8px;
+    /* background-color: red; */
+    cursor: pointer;
+    display: inline-block;
+}
+
+.search-head-box2{
+    height: 32px;
+    padding: 2px 0;
+    margin: 10px 0 0 5px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+
+}
+.search-head-main {
+    width: 330px;
+    height: 32px;
+    background-color: #f6f6f6;
+    padding-left: 2px;
+    border: none;
+    border-radius: 20px;
+    outline: medium;
+}
+
+.search-head-box2 .search-btn{
+    font-family: 'icomoon';
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 15px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+.cancel-head-box3 {
+    width: 45px;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+    margin: 12px 0 0 8px;
+    cursor: pointer;
+    /* margin-left: 10px; */
+}
+.search_history{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 65px;
+    background-color: #fff;
+}
+.search_history_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 16px;
+}
+.history_head{
+    font-size: 17px;
+    font-weight: 700;
+    padding-left: 11px;
+}
+.delect_icon{
+    font-family: 'icomoon';
+    font-size: 17px;
+    color: #b2b2b2;
+    cursor: pointer;
+}
+.history_ul_bigbox{
+    /* display: none; */
+}
+.history_content{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    /* padding-left: 11px; */
+    list-style: none;
+}
+.history_content li{
+    font-size: 15px;
+    margin-left: 11px;
+    padding: 0 10px;
+    background-color: #f6f6f6;
+    border-radius: 16px;
+}
+.search-main-head{
+    display: none;
+}
+.search-main-head ul {
+    display: flex;
+    /* visibility: hidden; */
+    justify-content: space-between;
+    position: fixed;
+    top: 50px;
+    /* overflow: auto; */
+    width:  443px;
+    height: 45px;
+    padding-top: 10px;
+    background-color: #ffff;
+    list-style: none;
+    z-index: 999;
+    border-bottom: 6px solid rgba(238, 234, 234, 0.4);
+}
+
+.search-main-head ul .active{
+    color: rgb(10, 10, 10);
+    font-weight: 700;
+}
+
+.search-main-head .tag {
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 12px;
+    height: 40px;
+    color: #b2b2b2;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.search-main-boxs{
+    margin-top: 110px;
+}
+.search-main-boxs .search-tag1-artical{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.search-main-boxs .artical-box1:nth-child(2n+1){
+    margin-left: 19px;
+}
+.search-tag2-artical{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin-top: 110px;
+}
+.search-bigbox-dispaly2{
+    display: block;
+}
+/* .search-main-boxs .search-main1-artical{
+    width: 190px;
+    margin-top: 5px;
+} */
+/* 下面两个选择 */
+.search-main ul {
+    display: flex;
+    width: 443px;
+    height: 40px;
+    position: fixed;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(214, 211, 211);
+    background-color: #fff;
+    list-style: none;
+    z-index: 999;
+    top: 50px;
+}
+
+.search-tag-bigbox{
+    position: relative;
+    top: 105px;
+    padding-top: 10px;
+    background-color: #fff;
+    z-index: 99;
+}
+.search-tag-body{
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 17px;
+    line-height: 50px;
+    padding: 0 12px;
+    /* background-color: #a79c9c; */
+}
+.search-tag-body .tag-boxright{
+    font-size: 14px;
+    color: #b2b2b2;
+}
+.tag-search {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-main {
+    display: none;
+}
+
+
+/* 用户里面的大盒子的每一条的模板 */
+.search-tag2-user{
+    display: none;
+}
+.search-main2-user {
+    width: 443px;
+    height: 900px;
+    box-sizing: content-box;
+    margin-top: 80px;
+    padding-bottom: 80px;
+    /* display: none; */
+}
+
+.search-user-box1 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 443px;
+    height: 70px;
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(215, 209, 209,0.3);
+}
+
+.search-user-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+    margin-left: 5px;
+    overflow: hidden;
+}
+
+.search-user-pics {
+    width: 100%;
+    height: 100%;
+}
+.userName_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    margin-left: 10px;
+}
+.search-user-name{
+    font-size: 17px;
+    font-weight: 700;
+}
+.search-user-intro{
+    margin-top: 5px;
+    font-size: 14px;
+    color:rgb(188,188,188) ;
+}
+/* .search-user-name {
+    transform: translate(-123px, 0);
+} */
+
+
+
+/* .user-foci-change {
+    width: 70px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid rgb(115, 13, 212);
+    background-color: rgb(115, 13, 210);
+    color: #fff;
+    cursor: pointer;
+} */
+
+/* .search-blank1,
+.search-blank2 {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 30px;
+    transform: translate(145px, 100px);
+    cursor: pointer;
+} */

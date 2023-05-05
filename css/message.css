@@ -1,0 +1,205 @@
+.message {
+    display: none;
+    margin: auto;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    /* border-radius: 5px 5px 0 0; */
+    overflow: auto;
+}
+.message::-webkit-scrollbar {
+    display: none;
+}
+.footbigbox{
+    height: 130px;
+}
+.message-top {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'icomoon';
+    top: 0px;
+    width: 443px;
+    height: 40px;
+    margin-top: 5px;
+    /* background-color: pink; */
+    line-height: 40px;
+}
+.search-head-box3{
+    padding-right: 15px;
+}
+/* 最底部的选项 */
+
+.message-top-back {
+    width: 40px;
+    height: 40px;
+    font-family: 'icomoon';
+    font-size: 40px;
+    color: rgb(168, 167, 167);
+    cursor: pointer;
+}
+
+.message .message-top-text {
+    font-size: 22px;
+    cursor: default;
+}
+
+.message .search-head-box3 {
+    font-size: 17px;
+    cursor: pointer;
+
+}
+
+/* 三个选择点击的盒子 */
+.message-main {
+    width: 443px;
+    height: 600px;
+    /* background-color: blue; */
+}
+
+.message-main-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 443px;
+    height: 85px;
+    margin: 15px 0 8px 0;
+    padding-bottom: 25px;
+    /* background-color: skyblue; */
+    border-bottom: 1px rgb(246, 240, 240) solid;
+}
+
+
+.message-main-collect,
+.message-main-fans,
+.message-main-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 50px;
+    /* background-color: red; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.message-main-logo {
+    height: 50px;
+    width: 50px;
+    font-family: 'icomoon';
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 8px;
+    border-radius: 14px;
+}
+.message-main-fans .message-main-logo{
+    font-size: 30px;
+}
+
+/* 这个是具体的聊天列表 */
+.message-msgList-box1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 443px;
+    height: 60px;
+    padding: 10px 0 6px;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(246, 240, 240);
+    cursor: default;
+}
+
+.msgList-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: pink;
+    transform: translateX(10px);
+}
+
+.msgList-pics {
+    width: 100%;
+    height: 100%;
+}
+
+.msgList-main {
+    width: 120px;
+    transform: translateX(25px);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.msgList-nickname {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.msgList-description {
+    font-size: 12px;
+    color: rgb(207, 199, 199);
+}
+
+.msgList-icon {
+    font-family: 'icomoon';
+    font-size: 40px;
+    color: rgb(207, 199, 199);
+    cursor: pointer;
+}
+.msg-foot {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    /* top: 100vh; */
+    bottom: 0;
+    width:  443px;
+    height: 55px;
+    background-color: #fff;
+    /* border-radius: 0 0 5px 5px; */
+
+}
+.msg-foot .active .foot-box1{
+    color: rgb(57, 56, 56);
+}
+.msg-foot .active .foot-box2{
+    font-weight: 600;
+    color: rgb(57, 56, 56);
+}
+.msg-foot div[class^="msg-foot-"]{
+    display: flex;
+    flex-direction: column;
+    height: 38px;
+    padding: 0 15px 5px 15px;
+    font-family: 'icomoon';
+    text-align: msg;
+    color: rgb(130, 127, 127);
+    cursor: pointer;
+}
+.msg-foot .foot-box1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.msg-foot .foot-box2 {
+    font-size: 14px;
+}
+.msg-foot .msg-foot-publish .foot-box1{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+    background-color: #4f4c4c;
+    border-radius: 10px;
+}
+.msg-foot-data-bigbox{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    height: 320px;
+    border-radius: 12px 12px 0 0;
+    background-color: #fff;
+    z-index: 102;
+}

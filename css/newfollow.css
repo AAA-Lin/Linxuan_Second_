@@ -1,0 +1,227 @@
+.newfollow {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    /* border-radius: 5px; */
+    overflow: auto;
+    z-index: 999;
+
+}
+
+.newfollow::-webkit-scrollbar {
+    display: none;
+}
+
+.newfollow-top {
+    display: flex;
+    justify-content: space-between;
+    width: 443px;
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 0;
+    /* border-bottom: 1px solid rgb(215, 209, 209); */
+
+}
+
+.newfollow-top-back {
+    width: 40px;
+    height: 40px;
+    font-family: 'icomoon';
+    font-size: 40px;
+    color: rgb(168, 167, 167);
+    cursor: pointer;
+}
+.newfollow-head-head .home-head-search  .search-input{
+    padding-left: 5px;
+}
+.newfollow-head-head .home-head-search  .searchSpan{
+    padding-right: 2px;
+}
+.newfollow-top-word {
+    transform: translate(-189px, 0);
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: default;
+}
+.newfollow-head-head{
+    position: relative;
+}
+
+.newfollow-box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 443px;
+    height: 60px;
+    margin-top: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(215, 209, 209, 0.4);
+}
+
+.newfollow-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+    margin-left: 12px;
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.newfollow-pics {
+    width: 100%;
+    height: 100%;
+}
+
+.newfollow-name {
+    width: 270px;
+    /* transform: translate(-96px, 0); */
+    cursor: pointer;
+}
+
+
+.newfollow-foci {
+    width: 70px;
+    height: 30px;
+    margin-right: 16px;
+    border-radius: 18px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #f6f6f6;
+    background-color: #f6f6f6;
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.newfollows-blank {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 30px;
+    transform: translate(145px, 100px);
+    cursor: pointer;
+}
+
+
+/*  */
+.newfans {
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    /* border-radius: 5px; */
+    overflow: auto;
+    z-index: 999;
+
+}
+
+.newfans::-webkit-scrollbar {
+    display: none;
+}
+
+.newfans-top {
+    display: flex;
+    justify-content: space-between;
+    width: 443px;
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 0;
+    /* border-bottom: 1px solid rgb(215, 209, 209); */
+
+}
+
+.newfans-top-back {
+    width: 40px;
+    height: 40px;
+    font-family: 'icomoon';
+    font-size: 40px;
+    color: rgb(168, 167, 167);
+    cursor: pointer;
+}
+.newfans-head-head .home-head-search  .search-input{
+    padding-left: 5px;
+}
+.newfans-head-head .home-head-search  .searchSpan{
+    padding-right: 2px;
+}
+.newfans-top-word {
+    transform: translate(-189px, 0);
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: default;
+}
+.newfans-head-head{
+    position: relative;
+}
+
+.newfans-box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 443px;
+    height: 60px;
+    margin-top: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(215, 209, 209, 0.4);
+}
+
+.newfans-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+    margin-left: 12px;
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.newfans-pics {
+    width: 100%;
+    height: 100%;
+}
+
+.newfans .newfans-name {
+    width: 270px;
+    cursor: pointer;
+    transform: translate(0,0);
+}
+
+
+.newfans-foci {
+    width: 70px;
+    height: 30px;
+    margin-right: 16px;
+    border-radius: 18px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #f6f6f6;
+    background-color: #f6f6f6;
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.newfanss-blank {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 30px;
+    transform: translate(145px, 100px);
+    cursor: pointer;
+}

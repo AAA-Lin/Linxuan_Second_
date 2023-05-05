@@ -1,0 +1,160 @@
+.collect {
+    display: none;
+    margin: 0 auto;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    /* overflow: auto; */
+    box-sizing: border-box;
+    padding: 0;
+}
+.collert-top-box{
+    width: 443px;
+    height: 60px;
+}
+.collect-top {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 443px;
+    height: 40px;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.collect-top-back {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    font-family: 'icomoon';
+    font-size: 40px;
+    color: rgb(168, 167, 167);
+    cursor: pointer;
+}
+
+.collect-top-word {
+    transform: translate(-96%, 0);
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    text-align: center;
+    cursor: default;
+}
+
+.collect-class {
+    display: flex;
+    justify-content: space-around;
+    width: 443px;
+    height: 45px;
+    line-height: 50px;
+    margin-bottom: 5px;
+}
+
+.collect-class .active {
+    border-bottom: 3px solid #44bdb8;
+}
+
+.collect-class-collect,
+.collect-class-like {
+    height: 45px;
+    width: 40px;
+    margin-top: -2px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* 点赞与收藏的内容盒子 */
+.collect-main-like,
+.collect-main-collect {
+    width: 443px;
+    /* height: 400px; */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+/* 显示哪一个盒子 */
+.collect-main-collect{
+    display: none;
+}
+.collect-main-like .box1,
+.collect-main-collect .box2 {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 443px;
+    height: 60px;
+    border-bottom: 1px solid rgba(207, 199, 199, 0.5);
+    padding-bottom: 10px;
+    margin-top: 15px;
+    cursor: default;
+}
+
+.collect-main-like .box1-img,
+.collect-main-collect .box2-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: rgb(247, 157, 172); */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.collect-main-like .box1-imgs ,
+.collect-main-collect .box2-imgs {
+    width: 100%;
+    height: 100%;
+}
+
+.collect-main-like .box1-left,
+.collect-main-collect .box2-left {
+    /* margin-left: 10px; */
+    display: flex;
+    margin-left: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+}
+.box1-text,
+.box2-text {
+    width: 240px;
+    padding-top: 5px;
+    font-size: 14px;
+    color: rgb(188, 182, 182);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.box1-word,
+.box2-word {
+    margin-left: 10px;
+}
+
+/* 具体信息里面右边的图片 */
+.collect-main-like .box1-right,
+.collect-main-collect .box2-right {
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.collect-main-like .box1-pic,
+.collect-main-collect .box2-pic {
+    width: 46px;
+    height: 48px;
+    background-color: skyblue;
+}
+
+.collect-main-like .box1-pics,
+.collect-main-collect .box2-pics {
+    width: 100%;
+    height: 100%;
+}
+

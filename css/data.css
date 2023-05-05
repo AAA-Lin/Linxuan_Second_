@@ -1,0 +1,189 @@
+.data {
+    display: none;
+    margin: auto;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    /* border-radius: 5px; */
+    /* overflow: auto; */
+    box-sizing: border-box;
+}
+
+.data-top-bigbox{
+    height: 50px;
+}
+.data-top {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 435px;
+    height: 40px;
+    padding: 10px 0 8px 5px;
+    background-color: #fff
+}
+
+.data-top-back {
+    width: 40px;
+    height: 40px;
+    font-family: 'icomoon';
+    font-size: 40px;
+    color: rgb(168, 167, 167);
+    cursor: pointer;
+}
+
+.data-top-word {
+    transform: translate(5%, 0);
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    cursor: default;
+
+}
+
+.data-pic {
+    position: relative;
+    margin-top: 50px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    background-color: pink;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+}
+
+/* 这个盒子用来上传新的头像并且渲染出来 */
+.upload-avatar {
+    width: 90px;
+    height: 90px;
+    /* background-color: black; */
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+}
+
+/* 这个是渲染出来的盒子 */
+.data-pics {
+    /* position: absolute; */
+    width: 100%;
+    /* height: 90px; */
+}
+
+/* 主要的编辑资料的部分 */
+.data-main {
+    margin-top: 20px;
+    width: 443px;
+    height: 300px;
+    /* background-color: skyblue; */
+}
+
+.data-main-name,
+.data-main-sex,
+.data-main-birthday,
+.data-main-place,
+.data-main-vita {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'icomoon';
+    color: rgb(122, 123, 124);
+    width: 434px;
+    height: 60px;
+    padding-left: 15px;
+    /* border-top: 1px solid rgb(207, 201, 201); */
+
+}
+
+.data-main div[class^=show] {
+    /* display: none; */
+    margin-right: -300px;
+    color: black;
+    cursor: pointer;
+
+}
+
+.data-main input {
+    width: 260px;
+    /* display: none; */
+    margin-right: 10px;
+    transform: translate(95px, 0);
+    height: 27px;
+    border: none;
+    outline: none;
+    /* background-color: #5cc1bd; */
+
+}
+
+.data-main-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'icomoon';
+    color: rgb(122, 123, 124);
+    width: 434px;
+    height: 60px;
+    padding-left: 15px;
+    /* border-top: 1px solid rgb(188, 182, 182); */
+    /* border-bottom: 1px solid rgb(188, 182, 182); */
+}
+
+.data-main-reminder {
+    width: 70px;
+    /* padding: 5px 5px; */
+    font-size: 17px;
+}
+
+.data-backgroun-pic {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-105px);
+    background-color: pink;
+
+}
+.data-backgroun-pic img{
+    width: 100%;
+    height: 100%;
+}
+.data-backgroun-pics {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* 这个盒子用来上传新的背景并且渲染出来 */
+.data-backgroun-pic .upload-background {
+    display: block;
+    margin-right: 0;
+    transform: translate(0, 0);
+    width: 90px;
+    height: 55px;
+    background-color: black;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+}
+
+.data-main-input {
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+/* 点击保存的按钮 */
+.savaData {
+    /* display: none; */
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 8px;
+    margin-top: 5px;
+    background-color: #5cc1bd;
+    /* transform: translate(-50%, 0); */
+    cursor: pointer;
+}

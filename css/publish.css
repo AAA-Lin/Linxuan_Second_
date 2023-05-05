@@ -1,0 +1,199 @@
+.publish {
+    position: relative;
+    display: none;
+    margin: auto;
+    width: 443px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 第一个分割线上面的内容 */
+.publish-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    width: 443px;
+    height: 240px;
+    z-index: 2;
+    /* background-color: pink; */
+}
+
+.publish-head-back {
+    width: 40px;
+    height: 40px;
+    margin-top: 12px;
+    margin-left: 6px;
+    font-family: 'icomoon';
+    font-size: 30px;
+    color: #646363;
+    cursor: pointer;
+}
+
+/* 上传图片 */
+.publish-head-upload {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    transform: translate(14px, -10px);
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    /* background-color: #c32424; */
+    font-family: 'icomoon';
+    font-size: 50px;
+    text-align: center;
+    line-height: 90px;
+    color: #9e9e9e;
+    cursor: pointer;
+    z-index: 5;
+
+}
+
+.upload-file {
+    position: absolute;
+    z-index: 10;
+    top: 67px;
+    left: 14px;
+    width: 100px;
+    height: 101px;
+    background-color: pink;
+    opacity: 0;
+}
+
+.upload-imgs {
+    display: none;
+    position: absolute;
+    z-index: 8;
+    top: 67px;
+    left: 14px;
+    width: 100px;
+    height: 101px;
+}
+
+.publish-title {
+    font-size: 20px;
+    margin-left: 20px;
+    border: none;
+    width: 400px;
+    outline: medium;
+    background-color: #fff;
+
+}
+
+/* 第二个分割线上面的内容 */
+.publish-main {
+    position: absolute;
+    width: 443px;
+    /* height: 300px; */
+    top: 220px;
+    /* background-color: pink; */
+}
+.publish-maintext {
+    width: 400px;
+    height: 100px;
+    resize: none;
+    border: none;
+    outline: medium;
+    font-size: 16px;
+    margin-left: 20px;
+    padding-bottom: 60px;
+    /* word-wrap: break-word; */
+    word-break: break-all;
+    /* color: rgb(168, 167, 167); */
+    background-color: #fff;
+
+}
+
+.two-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    height: 30px;
+}
+
+.btn-topic,
+.btn-user {
+    width: 70px;
+    height: 25px;
+    /* background-color: skyblue; */
+    border: 1px solid rgb(201, 199, 199);
+    border-radius: 8px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    color: #6a6a6c;
+}
+
+/* 发布按钮 */
+.publish-foot {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 400px;
+    height: 50px;
+    background-color: #9865ce;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+/* 隐藏弹框 */
+.topic-box {
+    display: none;
+    border-radius: 7px;
+    position: absolute;
+    width: 280px;
+    height: 100px;
+    top: 75px;
+    left: 82px;
+    z-index: 999;
+    overflow: hidden;
+    background-color: #fff;
+    cursor: default;
+}
+
+.publish-tag {
+    border: none;
+    width: 280px;
+    height: 45px;
+    padding: 10px 0 5px 8px;
+    font-size: 20px;
+    outline: medium;
+}
+
+.publish-tag-but {
+    display: flex;
+    border-top: 1px solid rgb(196, 194, 194);
+}
+
+.tag-cancle,
+.tag-ensuer {
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(156, 78, 229);
+    text-align: center;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.tag-ensuer {
+    border-left: 1px solid rgb(196, 194, 194);
+}
+
+.publish-tag-mask {
+    display: none;
+    position: absolute;
+    /* transform: translate(112px, -290px); */
+    width: 443px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
